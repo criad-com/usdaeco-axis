@@ -1,0 +1,118 @@
+#usda 1.0
+(
+    customLayerData = {
+        string "aeco:axis:layer" = "derived"
+        string "aeco:axis:producer" = "aeco-axis 0.1.3"
+    }
+)
+
+def "Run"
+{
+    def "Facility"
+    {
+        def "Inlet"
+        {
+            double aeco:axis:length = 3
+
+            def BasisCurves "Axis" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "exact"
+                uniform token aeco:derived:role = "axis"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000001"
+                string aeco:derived:stamp = "aeco-axis 0.1.3"
+                double aeco:derived:tolerance = 1e-9
+                int[] curveVertexCounts = [2]
+                float3[] extent = [(-0.03, -0.03, -0.03), (3.03, 0.03, 0.03)]
+                point3f[] points = [(0, 0, 0), (3, 0, 0)]
+                color3f[] primvars:displayColor = [(0.12, 0.58, 0.88)]
+                uniform token purpose = "guide"
+                uniform token type = "linear"
+                float[] widths = [0.06] (
+                    interpolation = "constant"
+                )
+                uniform token wrap = "nonperiodic"
+            }
+        }
+
+        def "Bend"
+        {
+            double aeco:axis:length = 1.5707963267948966
+
+            def BasisCurves "Axis" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "arcSegmented"
+                uniform token aeco:derived:role = "axis"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis 0.1.3"
+                double aeco:derived:tolerance = 0.00030129175712289896
+                int[] curveVertexCounts = [33]
+                float3[] extent = [(2.97, -0.03, -0.03), (4.03, 1.03, 0.03)]
+                point3f[] points = [(3, 0, 0), (3.0490677, 0.0012045437, 0), (3.0980172, 0.0048152735, 0), (3.1467304, 0.01082349, 0), (3.1950903, 0.01921472, 0), (3.2429802, 0.029968746, 0), (3.2902846, 0.043059666, 0), (3.3368897, 0.058455937, 0), (3.3826835, 0.076120466, 0), (3.427555, 0.09601071, 0), (3.4713967, 0.11807874, 0), (3.5141027, 0.14227138, 0), (3.5555701, 0.16853039, 0), (3.5956993, 0.19679247, 0), (3.6343932, 0.22698955, 0), (3.6715589, 0.25904888, 0), (3.7071068, 0.29289323, 0), (3.740951, 0.32844105, 0), (3.7730105, 0.36560673, 0), (3.8032076, 0.4043007, 0), (3.8314695, 0.44442976, 0), (3.8577287, 0.48589724, 0), (3.8819213, 0.52860326, 0), (3.9039893, 0.5724449, 0), (3.9238796, 0.61731654, 0), (3.941544, 0.66311014, 0), (3.9569404, 0.7097153, 0), (3.9700313, 0.7570198, 0), (3.9807854, 0.8049097, 0), (3.9891765, 0.8532695, 0), (3.9951847, 0.90198284, 0), (3.9987955, 0.9509323, 0), (4, 1, 0)]
+                color3f[] primvars:displayColor = [(0.12, 0.58, 0.88)]
+                uniform token purpose = "guide"
+                uniform token type = "linear"
+                float[] widths = [0.06] (
+                    interpolation = "constant"
+                )
+                uniform token wrap = "nonperiodic"
+            }
+        }
+
+        def "Outlet"
+        {
+            double aeco:axis:length = 2
+
+            def BasisCurves "Axis" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "exact"
+                uniform token aeco:derived:role = "axis"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000003"
+                string aeco:derived:stamp = "aeco-axis 0.1.3"
+                double aeco:derived:tolerance = 1e-9
+                int[] curveVertexCounts = [2]
+                float3[] extent = [(3.97, 0.97, -0.03), (4.03, 3.03, 0.03)]
+                point3f[] points = [(4, 1, 0), (4, 3, 0)]
+                color3f[] primvars:displayColor = [(0.12, 0.58, 0.88)]
+                uniform token purpose = "guide"
+                uniform token type = "linear"
+                float[] widths = [0.06] (
+                    interpolation = "constant"
+                )
+                uniform token wrap = "nonperiodic"
+            }
+        }
+
+        def "Riser"
+        {
+            double aeco:axis:length = 2
+
+            def BasisCurves "Axis" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "exact"
+                uniform token aeco:derived:role = "axis"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000004"
+                string aeco:derived:stamp = "aeco-axis 0.1.3"
+                double aeco:derived:tolerance = 1e-9
+                int[] curveVertexCounts = [2]
+                float3[] extent = [(3.97, 2.97, -0.03), (4.03, 3.03, 2.03)]
+                point3f[] points = [(4, 3, 0), (4, 3, 2)]
+                color3f[] primvars:displayColor = [(0.12, 0.58, 0.88)]
+                uniform token purpose = "guide"
+                uniform token type = "linear"
+                float[] widths = [0.06] (
+                    interpolation = "constant"
+                )
+                uniform token wrap = "nonperiodic"
+            }
+        }
+    }
+}
+

@@ -1,0 +1,56 @@
+#usda 1.0
+(
+    subLayers = [@usd/schema.usda@, @usdGeom/schema.usda@, @usdAeco/schema.usda@]
+)
+over "GLOBAL" (
+    customData = {
+        string libraryName = "usdAecoAxis"
+        string libraryPath = "./"
+        bool skipCodeGeneration = true
+        bool useLiteralIdentifier = true
+    }
+) {}
+
+class "AecoAxisAPI" (
+    inherits = </APISchemaBase>
+    doc = """The driving axis of a path-based element (wall, pipe, duct,
+    cable carrier, beam, column): the one representation every host
+    treats as THE parameter — IFC's 'Axis' representation, an authoring
+    tool's location curve. Authored in the prim's local space; the prim's
+    transform places it. Convention: the axis START is the local origin
+    (hosts re-express placement at the axis start), so a length edit is
+    an edit of aeco:axis:end and a move is an edit of the transform.
+    Length is DERIVED (E13): hosts report it, editors never author it.
+    A derived Axis gprim (BasisCurves, purpose guide) may sit beside the
+    attributes so a viewer with nothing installed can draw the plan
+    (B9); the attributes are the truth, the curve is their picture."""
+    customData = {
+        string className = "AxisAPI"
+        token apiSchemaType = "singleApply"
+        token[] apiSchemaCanOnlyApplyTo = ["Imageable"]
+    }
+) {
+    double3 aeco:axis:start = (0, 0, 0) (
+        doc = """DRIVER (m). Local-space start of the axis; by convention
+        the local origin."""
+    )
+    double3 aeco:axis:end = (1, 0, 0) (
+        doc = """DRIVER (m). Local-space end of the axis."""
+    )
+    uniform token aeco:axis:curve = "line" (
+        allowedTokens = ["line", "arc"]
+        doc = """DRIVER. 'arc' = the circular arc from start to end
+        through aeco:axis:arcPoint (walls); flow segments are lines."""
+    )
+    double3 aeco:axis:arcPoint = (0, 0, 0) (
+        doc = """DRIVER, arc only: a point on the arc between start and
+        end."""
+    )
+    double aeco:axis:length = 0 (
+        aecoDerived = true
+        doc = """DERIVED (m). Host-reported length along the axis (arc
+        length for arcs). Editors compute a length control from the axis
+        and write aeco:axis:end back; they never author this."""
+    )
+}
+

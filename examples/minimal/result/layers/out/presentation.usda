@@ -1,0 +1,653 @@
+#usda 1.0
+(
+    doc = "Schematic cylinder strokes of radius 0.045 m, not physical pipe bodies or diameters."
+)
+
+over "Run"
+{
+    over "Facility"
+    {
+        over "Inlet"
+        {
+            def Cylinder "ReviewStroke00" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Inlet/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000001"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 3
+                color3f[] primvars:displayColor = [(0.12, 0.58, 0.88)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (2.220446049250313e-16, 0, -1, 0), (0, 1, 0, 0), (1, 0, 2.220446049250313e-16, 0), (1.5, 0, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+
+        over "Bend"
+        {
+            def Cylinder "ReviewStroke00" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908251837075426
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.0006022703446078026, -0.0245338055555977, -0.9996988194728412, 0), (-0.0245338055555977, 0.9993977296553921, -0.024541196886213, 0), (0.9996988194728412, 0.024541196886213, 0, 0), (3.0245338678359985, 0.0006022718735039234, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke01" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908247107505789
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.005411742441218559, -0.07336521985906014, -0.9972904579703856, 0), (-0.07336521985906014, 0.9945882575587817, -0.07356454608857664, 0), (0.9972904579703856, 0.07356454608857664, 2.220446049250313e-16, 0), (3.0735424757003784, 0.00300990859977901, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke02" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908233111153177
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.014984449987440085, -0.12149039569453227, -0.9924794960161948, 0), (-0.12149039569453227, 0.9850155500125599, -0.12241098801758002, 0), (0.9924794960161948, 0.12241098801758002, 0, 0), (3.1223738193511963, 0.007819381775334477, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke03" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908248003043922
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.029227939158422034, -0.16844484774243934, -0.9852776567250361, 0), (-0.16844484774243934, 0.970772060841578, -0.17096180613933043, 0), (0.9852776567250361, 0.17096180613933043, 0, 0), (3.170910358428955, 0.015019104816019535, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke04" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908254470173629
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.04800517540214144, -0.21377717028895055, -0.9757022212734062, 0), (-0.21377717028895055, 0.9519948245978587, -0.21910083386911455, 0), (0.9757022212734062, 0.21910083386911455, 1.1102230246251565e-16, 0), (3.219035267829895, 0.024591732770204544, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke05" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908235597454805
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.07113601232218192, -0.2570519015161727, -0.9637759011709196, 0), (-0.2570519015161727, 0.9288639876778183, -0.26671335235076205, 0), (0.9637759011709196, 0.26671335235076205, 2.220446049250313e-16, 0), (3.2666324377059937, 0.03651420585811138, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke06" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908239451646497
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.0983964894633429, -0.29784999634821724, -0.9495280462085663, 0), (-0.29784999634821724, 0.9016035105366572, -0.3136821471861967, 0), (0.9495280462085663, 0.3136821471861967, 1.1102230246251565e-16, 0), (3.313587188720703, 0.05075780116021633, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke07" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908263571621058
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.1295234461097351, -0.33577838378548647, -0.9329933300352501, 0), (-0.33577838378548647, 0.8704765538902651, -0.3598936594464188, 0), (0.9329933300352501, 0.3598936594464188, 2.220446049250313e-16, 0), (3.359786629676819, 0.06728820130228996, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke08" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.049082373371198036
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.1642211144826674, -0.3704760991491057, -0.9142094319778881, 0), (-0.3704760991491057, 0.8357788855173327, -0.40524204431755023, 0), (0.9142094319778881, 0.40524204431755023, 0, 0), (3.405119299888611, 0.08606558665633202, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke09" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.0490824197169641
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.20215069842270228, -0.4016040258138802, -0.8932241049016186, 0), (-0.4016040258138802, 0.7978493015772979, -0.4496117196233902, 0), (0.8932241049016186, 0.4496117196233902, 2.220446049250313e-16, 0), (3.449475884437561, 0.10704472288489342, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke10" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908245766539864
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.2429484570315782, -0.42886420258346775, -0.8700870893010779, 0), (-0.42886420258346775, 0.7570515429684217, -0.4928980188959764, 0), (0.8700870893010779, 0.4928980188959764, 0, 0), (3.4927496910095215, 0.13017506152391434, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke11" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.049082409775681436
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.2862231653033951, -0.4519949833207228, -0.8448531438638345, 0), (-0.4519949833207228, 0.7137768346966049, -0.5349982853275281, 0), (0.8448531438638345, 0.5349982853275281, 0, 0), (3.5348364114761353, 0.15540088713169098, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke12" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.049082548451330754
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.3315537900777351, -0.47077157344387754, -0.8175855979175911, 0), (-0.47077157344387754, 0.668446209922265, -0.575807077134117, 0), (0.8175855979175911, 0.575807077134117, 1.1102230246251565e-16, 0), (3.575634717941284, 0.18266142904758453, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke13" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908240166998484
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.378510910343099, -0.48501587715696215, -0.7883457932004844, 0), (-0.48501587715696215, 0.6214890896569011, -0.6152324035217089, 0), (0.7883457932004844, 0.6152324035217089, 1.1102230246251565e-16, 0), (3.615046262741089, 0.21189101040363312, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke14" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.049082434353632284
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.42663512426373773, -0.4945883086044421, -0.7572086078065029, 0), (-0.4945883086044421, 0.5733648757362622, -0.6531731196732898, 0), (0.7572086078065029, 0.6531731196732898, 0, 0), (3.6529760360717773, 0.2430192157626152, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke15" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.0490825675818199
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.47546423483964473, -0.4993976333824539, -0.7242484139853917, 0), (-0.4993976333824539, 0.5245357651603553, -0.6895391467057144, 0), (0.7242484139853917, 0.6895391467057144, 0, 0), (3.6893328428268433, 0.27597105503082275, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke16" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908237746092724
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.5245354311824666, -0.49939764979091594, -0.689539388880384, 0), (-0.49939764979091594, 0.47546456881753363, -0.7242481834167529, 0), (0.689539388880384, 0.7242481834167529, 2.220446049250313e-16, 0), (3.7240289449691772, 0.31066714227199554, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke17" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.049082525051509014
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.5733636762712244, -0.49458848652589044, -0.653174037855743, 0), (-0.49458848652589044, 0.4266363237287757, -0.7572078157753157, 0), (0.653174037855743, 0.7572078157753157, 2.220446049250313e-16, 0), (3.756980776786804, 0.3470238894224167, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke18" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908248532976576
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.6214888857320315, -0.48501592823699047, -0.6152325692516356, 0), (-0.48501592823699047, 0.37851111426796835, -0.7883456638632775, 0), (0.6152325692516356, 0.7883456638632775, -2.220446049250313e-16, 0), (3.788109064102173, 0.38495370745658875, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke19" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908234802526487
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.6684476976369981, -0.47077104112380846, -0.5758057852809417, 0), (-0.47077104112380846, 0.3315523023630017, -0.8175865077390884, 0), (0.5758057852809417, 0.8175865077390884, -2.220446049250313e-16, 0), (3.8173385858535767, 0.42436522245407104, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke20" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908255579814592
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.7137746396096265, -0.4519960215087896, -0.5350003368133271, 0), (-0.4519960215087896, 0.2862253603903737, -0.844851844769026, 0), (0.5350003368133271, 0.844851844769026, 2.220446049250313e-16, 0), (3.84459912776947, 0.4651634991168976, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke21" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908242094167729
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.7570526758286099, -0.42886352357055446, -0.49289686971149466, 0), (-0.42886352357055446, 0.2429473241713903, -0.8700877403047407, 0), (0.49289686971149466, 0.8700877403047407, 2.220446049250313e-16, 0), (3.869825005531311, 0.5072502493858337, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke22" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.049082469607412624
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.7978498490333807, -0.40160361979294, -0.44961111081313293, 0), (-0.40160361979294, 0.20215015096661926, -0.8932244113510226, 0), (0.44961111081313293, 0.8932244113510226, 0, 0), (3.8929553031921387, 0.5505240857601166, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke23" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.049082455035937146
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.8357783247249322, -0.3704766074193053, -0.40524273623973556, 0), (-0.3704766074193053, 0.1642216752750676, -0.9142091252689029, 0), (0.40524273623973556, 0.9142091252689029, -2.220446049250313e-16, 0), (3.9139344692230225, 0.5948807299137115, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke24" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908243402559213
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.8704769098117889, -0.3357779910838523, -0.35989316496456425, 0), (-0.3357779910838523, 0.12952309018821095, -0.9329935207769608, 0), (0.35989316496456425, 0.9329935207769608, 0, 0), (3.9327118396759033, 0.6402133405208588, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke25" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.049082477989599235
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.9016027500459151, -0.29785102174670863, -0.3136833593834474, 0), (-0.29785102174670863, 0.09839724995408483, -0.949527645751252, 0), (0.3136833593834474, 0.949527645751252, -2.220446049250313e-16, 0), (3.9492422342300415, 0.6864127218723297, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke26" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.049082451987581786
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.9288650352211777, -0.2570501537924807, -0.2667113885435384, 0), (-0.2570501537924807, 0.07113496477882253, -0.9637764446287207, 0), (0.2667113885435384, 0.9637764446287207, 2.220446049250313e-16, 0), (3.963485836982727, 0.7333675622940063, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke27" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908250450215278
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.9519940142649379, -0.21377888358925243, -0.21910268308503694, 0), (-0.21377888358925243, 0.048005985735062096, -0.9757018060170526, 0), (0.21910268308503694, 0.9757018060170526, 0, 0), (3.9754083156585693, 0.7809647619724274, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke28" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908240633663802
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.9707725829333501, -0.16844338858578561, -0.17096027920733478, 0), (-0.16844338858578561, 0.029227417066649664, -0.9852779216715203, 0), (0.17096027920733478, 0.9852779216715203, -2.220446049250313e-16, 0), (3.9849809408187866, 0.8290896117687225, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke29" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.049082441045074206
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.9850159585712083, -0.12148876462970531, -0.12240931920728784, 0), (-0.12148876462970531, 0.014984041428791839, -0.9924797018434223, 0), (0.12240931920728784, 0.9924797018434223, 1.1102230246251565e-16, 0), (3.992180585861206, 0.8776261806488037, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke30" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908247987903644
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.9945879007580285, -0.07336762517464085, -0.07356697113495665, 0), (-0.07336762517464085, 0.005412099241971835, -0.9972902790852964, 0), (0.07356697113495665, 0.9972902790852964, 3.3306690738754696e-16, 0), (3.9969900846481323, 0.9264575839042664, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+
+            def Cylinder "ReviewStroke31" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Bend/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000002"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 0.04908245748130945
+                color3f[] primvars:displayColor = [(0.95, 0.55, 0.15)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (0.9993977812453072, -0.024532755394864755, -0.02454014577570332, 0), (-0.024532755394864755, 0.000602218754692796, -0.9996988452755696, 0), (0.02454014577570332, 0.9996988452755696, 0, 0), (3.9993977546691895, 0.9754661619663239, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+
+        over "Outlet"
+        {
+            def Cylinder "ReviewStroke00" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Outlet/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000003"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 2
+                color3f[] primvars:displayColor = [(0.12, 0.75, 0.52)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (1, 0, -0, 0), (-0, 2.220446049250313e-16, -1, 0), (0, 1, 2.220446049250313e-16, 0), (4, 2, 0, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+
+        over "Riser"
+        {
+            def Cylinder "ReviewStroke00" (
+                prepend apiSchemas = ["AecoDerivedGeometryAPI"]
+            )
+            {
+                uniform token aeco:derived:approx = "defaultDims"
+                rel aeco:derived:from = </Run/Facility/Riser/Axis>
+                uniform token aeco:derived:role = "proxy"
+                string aeco:derived:source = "b9000000-0000-4000-8000-000000000004"
+                string aeco:derived:stamp = "aeco-axis review 0.1.3"
+                uniform token axis = "Z"
+                double height = 2
+                color3f[] primvars:displayColor = [(0.65, 0.35, 0.85)]
+                uniform token purpose = "proxy"
+                double radius = 0.045
+                matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (4, 3, 1, 1) )
+                uniform token[] xformOpOrder = ["xformOp:transform"]
+            }
+        }
+    }
+}
+

@@ -1,0 +1,85 @@
+{
+  "version": "0.1.4",
+  "baseline": "6700d456435cc6bf5a3a3f26ff7c102e9a17f0e5",
+  "runtime": {
+    "python": "3.13.12",
+    "usd": "26.8"
+  },
+  "public_references": {
+    "rewritten": 5,
+    "remaining": 0
+  },
+  "unchanged_artifacts": 13,
+  "changed_dependency_pins": [
+    "toolchain"
+  ],
+  "toolchain_revision": "4ec5051c419ef056dba594e64be661cb41810275",
+  "core_revision": "11000b2ca7a2f560bfcd1ffd439bf9b71a5f5c18",
+  "check": {
+    "checks": 54,
+    "failed": 0,
+    "not_run": 0
+  },
+  "pytest": {
+    "passed": 21,
+    "subtests_passed": 5
+  },
+  "structure": {
+    "passed": 29,
+    "failed": 0,
+    "inapplicable": [
+      "S20 (library)"
+    ]
+  },
+  "validators": {
+    "core_rules_loaded": 8,
+    "axis_rules_loaded": 3,
+    "missing_core_import_fails": true,
+    "seeded_missing_tolerance_warnings": 1
+  },
+  "example": {
+    "prim_count": 47,
+    "findings": 0,
+    "fresh_result_matches": true,
+    "republished": false,
+    "producer_version": "0.1.3",
+    "manifest_changes": [
+      "pins.toolchain.ref"
+    ]
+  },
+  "dependencies": {
+    "repos": {
+      "toolchain": {
+        "repo": "usdaeco-toolchain",
+        "library": null,
+        "ref": "v0.3.8"
+      },
+      "core": {
+        "repo": "usdaeco-core",
+        "library": "usdAeco",
+        "ref": "v0.9.2",
+        "version": "0.9.2"
+      },
+      "datacentre": {
+        "repo": "usdaeco-datacentre",
+        "library": null,
+        "ref": "v0.4.5"
+      }
+    }
+  },
+  "nix": {
+    "attempts": 1,
+    "exit": 1,
+    "elapsed_seconds": 0.62,
+    "status": "not proven",
+    "checks_completed": 0,
+    "reason": "With exact local source overrides, input resolution reached toolchain/aeco-toolchain/openusd and reported HTTP 404 for its pinned commit lookup. The offline attempt disabled HTTP connections, substitutes and builders."
+  },
+  "deviations": [
+    "The package version and derivation producer version are separate for this public-name release. The unchanged producer remains at 0.1.3, including presentation stamps; committed result and render bytes are preserved.",
+    "The manifest toolchain pin must match dependencies.json under S22 and the freshness gate, so this metadata field changes without republishing any result.",
+    "The existing minimal-example adapter now includes S29 from toolchain v0.3.8 and enumerates the pinned rule set instead of stopping at S28.",
+    "Nix builds are not proven: the single offline attempt stopped at the pinned upstream OpenUSD lookup. Its dependency pin remains unchanged.",
+    "The minimal example does not load a data-centre stage. The existing data-centre v0.4.5 pin is retained; optional consumer integration checks were not rerun."
+  ]
+}

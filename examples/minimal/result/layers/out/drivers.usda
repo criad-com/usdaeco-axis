@@ -1,0 +1,60 @@
+#usda 1.0
+(
+    doc = "Editable axis drivers; lengths and geometry live in separate derived layers."
+)
+
+over "Run"
+{
+    def AecoFacility "Facility" (
+        displayName = "demo-datacentre-01"
+    )
+    {
+        string aeco:id = "b9000000-0000-4000-8000-000000000010"
+
+        def Xform "Inlet" (
+            prepend apiSchemas = ["AecoElementAPI", "AecoAxisAPI", "AecoClassificationAPI:ifc"]
+        )
+        {
+            uniform token aeco:axis:curve = "line"
+            double3 aeco:axis:end = (3, 0, 0)
+            double3 aeco:axis:start = (0, 0, 0)
+            string aeco:class:ifc:code = "IfcPipeSegment"
+            string aeco:id = "b9000000-0000-4000-8000-000000000001"
+        }
+
+        def Xform "Bend" (
+            prepend apiSchemas = ["AecoElementAPI", "AecoAxisAPI", "AecoClassificationAPI:ifc"]
+        )
+        {
+            double3 aeco:axis:arcPoint = (3.7071067811865475, 0.2928932188134524, 0)
+            uniform token aeco:axis:curve = "arc"
+            double3 aeco:axis:end = (4, 1, 0)
+            double3 aeco:axis:start = (3, 0, 0)
+            string aeco:class:ifc:code = "IfcPipeSegment"
+            string aeco:id = "b9000000-0000-4000-8000-000000000002"
+        }
+
+        def Xform "Outlet" (
+            prepend apiSchemas = ["AecoElementAPI", "AecoAxisAPI", "AecoClassificationAPI:ifc"]
+        )
+        {
+            uniform token aeco:axis:curve = "line"
+            double3 aeco:axis:end = (4, 3, 0)
+            double3 aeco:axis:start = (4, 1, 0)
+            string aeco:class:ifc:code = "IfcPipeSegment"
+            string aeco:id = "b9000000-0000-4000-8000-000000000003"
+        }
+
+        def Xform "Riser" (
+            prepend apiSchemas = ["AecoElementAPI", "AecoAxisAPI", "AecoClassificationAPI:ifc"]
+        )
+        {
+            uniform token aeco:axis:curve = "line"
+            double3 aeco:axis:end = (4, 3, 2)
+            double3 aeco:axis:start = (4, 3, 0)
+            string aeco:class:ifc:code = "IfcPipeSegment"
+            string aeco:id = "b9000000-0000-4000-8000-000000000004"
+        }
+    }
+}
+

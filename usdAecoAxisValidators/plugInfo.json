@@ -1,0 +1,34 @@
+{
+  "Plugins": [
+    {
+      "Type": "python",
+      "Name": "usdAecoAxisValidators",
+      "Root": ".",
+      "Info": {
+        "Validators": {
+          "keywords": [
+            "UsdAecoAxisValidators"
+          ],
+          "AxisDegenerateChecker": {
+            "doc": "Distinct finite endpoints are required.",
+            "schemaTypes": [
+              "UsdAecoAxisAxisAPI"
+            ]
+          },
+          "AxisLengthMismatchChecker": {
+            "doc": "Reported length agrees with the line or circular arc.",
+            "schemaTypes": [
+              "UsdAecoAxisAxisAPI"
+            ]
+          },
+          "AxisArcPointMissingChecker": {
+            "doc": "An arc needs a distinct, finite, non-collinear middle point.",
+            "schemaTypes": [
+              "UsdAecoAxisAxisAPI"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

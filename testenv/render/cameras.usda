@@ -1,0 +1,14 @@
+#usda 1.0
+
+def "Renders"
+{
+    def Camera "usdAecoAxisExample"
+    {
+        float focalLength = 45
+        float horizontalAperture = 24
+        float verticalAperture = 15
+        matrix4d xformOp:transform = ( (0.8479983040050882, 0.52999894000318, 0, 0), (-0.26693682873382885, 0.4270989259741262, 0.8639046457203915, -0), (0.4578685464956302, -0.7325896743930083, 0.5036554011451932, 0), (8.286116377716503, -9.853786203690753, 8.459478000657773, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+

@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+/out/
+/examples/*/out/
+flake.lock
+/result
+/result-*
+STEERING.md

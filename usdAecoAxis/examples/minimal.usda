@@ -1,0 +1,41 @@
+#usda 1.0
+(
+    defaultPrim = "Run"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+def Xform "Run" {
+    def Xform "Pipe1" (
+        prepend apiSchemas = ["AecoElementAPI", "AecoClassificationAPI:ifc", "AecoAxisAPI"]
+    ) {
+        string aeco:id = "b9000000-0000-4000-8000-000000000001"
+        string aeco:class:ifc:code = "IfcPipeSegment.RIGIDSEGMENT"
+        double3 aeco:axis:start = (0, 0, 0)
+        double3 aeco:axis:end = (3, 0, 0)
+        uniform token aeco:axis:curve = "line"
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+    def Xform "Pipe2" (
+        prepend apiSchemas = ["AecoElementAPI", "AecoClassificationAPI:ifc", "AecoAxisAPI"]
+    ) {
+        string aeco:id = "b9000000-0000-4000-8000-000000000002"
+        string aeco:class:ifc:code = "IfcPipeSegment.RIGIDSEGMENT"
+        double3 aeco:axis:start = (0, 0, 0)
+        double3 aeco:axis:end = (0, 2, 0)
+        uniform token aeco:axis:curve = "line"
+        double3 xformOp:translate = (3, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+    def Xform "Pipe3" (
+        prepend apiSchemas = ["AecoElementAPI", "AecoClassificationAPI:ifc", "AecoAxisAPI"]
+    ) {
+        string aeco:id = "b9000000-0000-4000-8000-000000000003"
+        string aeco:class:ifc:code = "IfcPipeSegment.RIGIDSEGMENT"
+        double3 aeco:axis:start = (0, 0, 0)
+        double3 aeco:axis:end = (0, 0, 2)
+        uniform token aeco:axis:curve = "line"
+        double3 xformOp:translate = (3, 2, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+}

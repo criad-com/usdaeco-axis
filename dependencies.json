@@ -1,0 +1,20 @@
+{
+  "repos": {
+    "toolchain": {
+      "repo": "usdaeco-toolchain",
+      "library": null,
+      "ref": "v0.3.8"
+    },
+    "core": {
+      "repo": "usdaeco-core",
+      "library": "usdAeco",
+      "ref": "v0.9.2",
+      "version": "0.9.2"
+    },
+    "datacentre": {
+      "repo": "usdaeco-datacentre",
+      "library": null,
+      "ref": "v0.4.5"
+    }
+  }
+}

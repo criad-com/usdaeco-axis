@@ -1,0 +1,13 @@
+#usda 1.0
+(
+    defaultPrim = "Run"
+    metersPerUnit = 1
+    upAxis = "Z"
+    fallbackPrimTypes = {
+        token[] AecoFacility = ["Xform"]
+    }
+)
+
+def Xform "Run"
+{
+}

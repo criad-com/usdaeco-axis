@@ -1,0 +1,7 @@
+#usda 1.0
+( subLayers = [@../schema.usda@] )
+over "AecoAxisAPI" (
+    customData = {
+        string userDocBrief = "Local path drivers shared by walls, pipes, beams and other path elements; length is derived."
+    }
+) {}
