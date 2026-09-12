@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.5
+
+- public re-pin: toolchain v0.3.10, core v0.9.4, datacentre v0.4.8;
+  record each checked revision alongside its public release tag.
+- Build core from its source input with the pinned shared toolchain, avoiding
+  recursive evaluation of the core release's older flake inputs.
+- Keep supported requirement ranges and the unreleased v0.1.5 package version.
+  Republish the example through its runner; retain the v0.1.3 derivation and
+  presentation stamps because those implementations are unchanged.
+
 ## 0.1.4
 
 - Public names → github.com/criad-com; pin toolchain v0.3.8.

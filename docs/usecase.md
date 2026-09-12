@@ -98,6 +98,6 @@ pixels are not promised.
 
 ## 9 Status
 
-Version 0.1.4; schema unchanged from v0.1.1, built against
-core v0.9.2. [Verification](public-name-verification.md) records exact checked dependencies,
+Version 0.1.5; schema unchanged from v0.1.1, built against
+core v0.9.4. [Verification](toolchain-pin-verification.md) records exact checked dependencies,
 the schema and test results, rendered output and the Nix limitation.

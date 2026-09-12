@@ -41,7 +41,7 @@ crate in an isolated process with no family plugins.
 | result/layers/out/base.usda | Archived seed layer |
 
 This is a minimal library example labelled `demo-datacentre-01`. The shared
-harness requires a data-centre pin, so the manifest records v0.4.5 and
+harness requires a data-centre pin, so the manifest records v0.4.8 and
 `source.mode = minimal`; no data-centre release stage is composed or tested.
 The toolchain's unchanged S21–S28 functions run on this directory through the
 library's structure adapter; its default library rules would skip examples.

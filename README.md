@@ -40,7 +40,7 @@ is a drawing convention. Exact line guides retain `purpose = guide`, and the
 
 Use Python 3.11+ with OpenUSD 26.8+, numpy, jinja2, packaging, Pillow and pytest. Put the
 matching OpenUSD tools on PATH; `usdrecord` must provide the Embree renderer.
-Use toolchain v0.3.8 and core v0.9.2 source checkouts beside this repository,
+Use toolchain v0.3.10 and core v0.9.4 source checkouts beside this repository,
 or set TOOLCHAIN_DIR, CORE_DIR and CORE_PLUGIN_DIR. No package installation
 is needed; tests import directly from source. These commands register core's
 committed codeless resource plugin directly. CORE_PLUGIN_DIR can also select
@@ -51,6 +51,7 @@ export PYTHON=python3
 export TOOLCHAIN_DIR="$(cd ../usdaeco-toolchain && pwd)"
 export CORE_DIR="$(cd ../usdaeco-core && pwd)"
 export CORE_PLUGIN_DIR="$CORE_DIR/usdAeco"
+export PYTHONDONTWRITEBYTECODE=1
 env -u PYTHONPATH ./build.sh
 env -u PYTHONPATH PYTHONPATH="$CORE_DIR:$PWD" "$PYTHON" check.py
 env -u PYTHONPATH "$PYTHON" -m pytest -q
@@ -80,7 +81,7 @@ Omit `--publish` for an ordinary example run that writes only `out/`.
 `check_example()` compares fresh and committed layers and re-renders the crate
 in an isolated process. The gate runs all 29 toolchain structure rules, with
 S21–S29 explicitly applied to `examples/minimal`; S20 is inapplicable to a
-shared library. The shared harness requires a data-centre v0.4.5 metadata pin,
+shared library. The shared harness requires a data-centre v0.4.8 metadata pin,
 but this run uses `source.mode = minimal` and does not load that checkout.
 
 For runtime discovery register core first, then `usdAecoAxis` and
@@ -116,7 +117,10 @@ requires core `>=0.9.2,<1.0`. For a local source service use the registry file o
 `--override-input` mapping described in the
 [toolchain README](https://github.com/criad-com/usdaeco-toolchain#build-and-check).
 Repeat overrides for transitive inputs. Keep deployment lockfiles uncommitted.
-See [release verification](docs/public-name-verification.md) for the one-attempt Nix result.
+Core and datacentre are source inputs (`flake = false`); the shared toolchain
+builds the core plugin and its companion packages. The toolchain's nested
+family inputs select aeco-toolchain v0.4.0 and its core v0.9.2 test fixture.
+See [release verification](docs/toolchain-pin-verification.md) for the one-attempt Nix result.
 
 ## Family
 
@@ -140,14 +144,18 @@ and [use-case contract](docs/usecase.md).
 
 ## Status
 
-Version 0.1.4: **54 checks, 0 failed, 0 not run; 21 tests passed**, plus 5 subtests.
-This release updates public URLs and the toolchain pin. The schema source and
+Version 0.1.5: **54 checks, 0 failed, 0 not run; 21 tests passed**, plus 5 subtests.
+This release selects public tags for toolchain v0.3.10, core v0.9.4 and
+datacentre v0.4.8. S05 checks tag-only family refs and package-version agreement.
+The schema source and
 generated schema are unchanged from v0.1.1.
-Checks use core v0.9.2 and toolchain v0.3.8, pinned in `dependencies.json`.
+Checked source revisions are recorded beside the tags in `dependencies.json`.
 The unchanged derivation retains its v0.1.3 producer stamp so this release
-preserves every committed result and render byte. The manifest records the
-toolchain used for the current checks.
-See [release verification](docs/public-name-verification.md) for measured results and limitations.
+preserves the crate, five archived layers and committed renders byte-for-byte.
+The example was republished; its manifest and result README record the new
+pins. Fresh renders pass S28; the existing images are retained because sampled
+render bytes vary between runs.
+See [release verification](docs/toolchain-pin-verification.md) for measured results and limitations.
 This tool derives guide geometry; body
 regeneration, section solving and native host transactions belong to their owners.
 

@@ -1,13 +1,12 @@
 {
   description = "usdAecoAxis semantic library";
   inputs = {
-    toolchain.url = "github:criad-com/usdaeco-toolchain?ref=v0.3.8";
-    datacentre.url = "github:criad-com/usdaeco-datacentre?ref=v0.4.5";
+    toolchain.url = "github:criad-com/usdaeco-toolchain?ref=v0.3.10";
+    datacentre.url = "github:criad-com/usdaeco-datacentre?ref=v0.4.8";
     datacentre.flake = false;
     nixpkgs.follows = "toolchain/nixpkgs";
-    core.url = "github:criad-com/usdaeco-core?ref=v0.9.2";
-    core.inputs.toolchain.follows = "toolchain";
-    core.inputs.nixpkgs.follows = "nixpkgs";
+    core.url = "github:criad-com/usdaeco-core?ref=v0.9.4";
+    core.flake = false;
   };
   outputs = { self, nixpkgs, toolchain, core, ... }:
     let
@@ -16,7 +15,11 @@
         let
           kit = toolchain.lib.forSystem system;
           pkgs = nixpkgs.legacyPackages.${system};
-          corePlugin = core.packages.${system}.default;
+          corePlugin = (kit.buildCodelessSchema { name = "usdAeco"; src = core; }).overrideAttrs (old: {
+            postInstall = (old.postInstall or "") + ''
+              cp -RL tools/usdaeco_core tools/usdaeco_tools "$out/python/"
+            '';
+          });
           schema = (kit.buildCodelessSchema { name = "usdAecoAxis"; src = self; deps = [ corePlugin ]; }).overrideAttrs (old: {
             postInstall = (old.postInstall or "") + ''
               cp -RL tools/usdaeco_axis "$out/python/"

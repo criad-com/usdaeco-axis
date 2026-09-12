@@ -4,7 +4,7 @@ import os
 from pxr import Plug
 
 AXIS_API = "AecoAxisAPI"
-__version__ = "0.1.4"
+__version__ = "0.1.5"
 
 
 def register_plugins(core_plugin=None, axis_plugin=None):
